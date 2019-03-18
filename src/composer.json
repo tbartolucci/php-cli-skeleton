@@ -1,0 +1,17 @@
+{
+    "name": "tbartolucci/php-cli-skeleton",
+    "description": "Skeleton for PHP CLI tasks",
+    "license": [ "MIT" ],
+    "type": "project",
+    "require": {
+
+    },
+    "require-dev": {
+
+    },
+    "autoload": {
+        "classmap" : [
+            "lib/"
+        ]
+    }
+}
