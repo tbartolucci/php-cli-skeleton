@@ -2,16 +2,21 @@
 
 For those that want to write PHP CLI based scripts but not install PHP and its dependencies on your local machine.  I have seeded the docker file with the MySQL PDO extension.
 
-## Developing locally
+## Build and Run
 
 ```bash
+# Build
 docker build -t php-cli .
 
-docker run -v /path/to/application/src/:/app -it php-cli-app /bin/sh
+# Run development
+./docker-run.sh --dev php-cli 
+
+# Run 
+./docker-run.sh php-cli
 ```
 
-## Running
+If running in development mode you will be a shell prompt.  You'll need to run composer install yourself since we've mounted the source code to the container working directory.
 
 ```bash
-docker run php-cli-app
+php composer.phar install
 ```
